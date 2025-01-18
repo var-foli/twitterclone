@@ -1,0 +1,133 @@
+* {
+  font: 15px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+#home {
+  position: relative;
+  top: -20px;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
+  width: 500px;
+  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  border-color: rgb(194, 194, 194);
+  border-style: solid;
+  border-width: 1px;
+  border-top: none;
+}
+
+#user_descriptor {
+  display: inline;
+  position: relative;
+  top: 5px;
+  left: 45px;
+}
+
+#username_input {
+  border-width: 1px;
+  position: relative;
+  left: 45px;
+  top: 5px;
+}
+
+ion-icon {
+  color: rgb(143, 206, 248);
+}
+
+#new_icon {
+  position: relative;
+  top: 55px;
+  left: -310px;
+}
+
+#tweet_input {
+  border: none;
+  outline: none;
+  resize: none;
+  height: 100px;
+  position: relative;
+  top: 20px;
+  left: 45px;
+  width: 445px;
+  text-align: top;
+}
+
+#char_length {
+  position:relative;
+  top: 15px;
+  right: 70px;
+  text-align: right;
+}
+
+#submit_tweet {
+  position: relative;
+  top: -23px;
+  left: 440px;
+  background-color: rgb(143, 206, 248);
+  color: white;
+  border: none;
+  border-radius: 18px;
+  font-weight: bold;
+  font-size: 13px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  cursor: pointer;
+}
+
+form {
+  position: relative;
+  top: -40px;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
+  height: 200px;
+  width: 500px;
+  padding: 5px;
+  border-color: rgb(194, 194, 194);
+  border-style: solid;
+  border-width: 1px;
+  border-top: none;
+}
+
+#icon_posts {
+  position: relative;
+  top: 20px;
+  left: 8px;
+}
+
+#indiv_post {
+  position: relative;
+  top: -60px;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
+  width: 500px;
+  padding: 5px;
+  border-color: rgb(194, 194, 194);
+  border-style: solid;
+  border-width: 1px;
+  border-top: none;
+}
+
+#indiv_post_text {
+  position: relative;
+  top: -15px;
+  left: 45px;
+  width: 445px;
+  color: rgb(144, 144, 144);
+}
+
+#indiv_text {
+  color:black;
+}
+
+#post_user {
+  font-weight: bold;
+  color:black;
+}

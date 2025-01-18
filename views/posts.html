@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Clone</title>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <main>
+        <p id="home">Home</p>
+
+        <script>
+            function character_tracker(tweet_text) {
+                let char_length = (tweet_text).length;
+                document.getElementById("char_length").innerHTML = `${char_length} /280`;
+            }
+        </script>
+
+        <div id="new_post">
+            <form action="http://localhost:3500/newpost" method="post">
+                <p id="user_descriptor">You are tweeting as: </p>
+                <input id="username_input" name="username" value="RandomUser1"></input>
+                <ion-icon id="new_icon" size="large" name="person-circle-outline"></ion-icon>
+                <textarea id="tweet_input" name="tweet" placeholder="What's happening?" maxlength="280" onkeyup="character_tracker(this.value)"></textarea>
+                <p id="char_length">0 /280</p>
+                <input type="submit" id="submit_tweet" value="Tweet">
+            </form>
+        </div>
+
+
+
+        <div id="posts">
+            <p id="post_text"></p>
+
+            <script>
+
+                const fetchPosts = async () => {
+                    try {
+                        const response = await fetch("http://localhost:3500/posts");
+                        const posts = await response.json();
+                        posts.forEach(post => {
+
+                            const date = new Date(post.date_time);
+                            const month = date.toLocaleString('en-US', { month: "short" });
+                            const day = date.getDate();
+                            const year = date.getFullYear();
+                            const time = date.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+
+                            document.getElementById("post_text").innerHTML += 
+                                `<div id="indiv_post">
+                                    <ion-icon id="icon_posts" size="large" name="person-circle-outline"></ion-icon>
+                                    <article id="indiv_post_text">
+                                        <a id="post_user"> ${post.username}</a>
+                                        @${post.username.toLowerCase()} 
+                                        &#183
+                                        ${month} ${day}, ${year} at ${time.toLowerCase()}<br />
+                                        <a id="indiv_text">${post.text}</a>
+                                    </article>
+                                </div>`;
+                        });
+                    } catch (err) {
+                        console.log(err);
+                    }
+                }
+
+                fetchPosts();
+            </script>
+        </div>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

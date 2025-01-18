@@ -1,0 +1,26 @@
+{
+  "name": "twitterclone",
+  "version": "1.0.0",
+  "homepage": "https://var-foli.github.io/twitterclone",
+  "main": "index.js",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "nodemon": "^3.1.9"
+  }
+}
