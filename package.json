@@ -1,11 +1,8 @@
 {
   "name": "twitterclone",
   "version": "1.0.0",
-  "homepage": "https://var-foli.github.io/twitterclone",
   "main": "index.js",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "node server",
     "dev": "nodemon server"
   },
@@ -20,7 +17,6 @@
     "mongoose": "^8.9.4"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0",
     "nodemon": "^3.1.9"
   }
 }
